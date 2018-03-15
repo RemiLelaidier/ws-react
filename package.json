@@ -1,0 +1,30 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^15.5.7",
+    "cross-env": "^5.1.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "ts-loader": "^4.0.1",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "tslint": "^5.9.1",
+    "tslint-loader": "^3.6.0"
+  }
+}
