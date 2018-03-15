@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
+import App from './component/App'
 
 render(
-    React.createElement(<h1>Salut</h1>),
+    <App />,
     document.getElementById('app'))
