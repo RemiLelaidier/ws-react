@@ -4,7 +4,7 @@ const styles: React.CSSProperties = {
   container: {
     backgroundColor: '#433939',
     width: '100%',
-    height: '240px',
+    height: '285px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
