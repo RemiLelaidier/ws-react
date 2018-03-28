@@ -2,6 +2,9 @@ import * as React from 'react'
 import { MenuButtonProps } from '../types/props'
 
 const styles: React.CSSProperties = {
+  container: {
+    width: '6rem'
+  },
   cls1: {
     fill: 'none'
   },
@@ -33,7 +36,7 @@ class MenuButton extends React.Component<MenuButtonProps> {
 
   render (): any {
     return (
-      <div onClick={this.onMenuButtonClick}>
+      <div onClick={this.onMenuButtonClick} style={styles.container}>
       <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"

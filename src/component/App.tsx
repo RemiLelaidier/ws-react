@@ -4,7 +4,6 @@ import MenuPanel from './ui/MenuPanel'
 import AppState, { initialState } from './types/index'
 
 const style: React.CSSProperties = {
-  width: '10vw',
   position: 'fixed',
   top: 0,
   left: 0
