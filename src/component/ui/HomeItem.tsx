@@ -60,6 +60,10 @@ class HomeItem extends React.Component<HomeItemProps> {
         </div>
     )
   }
+
+  onHomeItemClick = (event: any) => {
+    this.props.onHomeItemClick(event)
+  }
 }
 
 export default HomeItem
