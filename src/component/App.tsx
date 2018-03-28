@@ -1,8 +1,7 @@
 import * as React from 'react'
 import MenuButton from './ui/MenuButton'
-import * as Redux from 'redux'
+import MenuPanel from './ui/MenuPanel'
 import AppState, { initialState } from './types/index'
-import appReducer from './reducers/index'
 
 const style: React.CSSProperties = {
   width: '10vw',
@@ -12,23 +11,34 @@ const style: React.CSSProperties = {
 }
 
 class App extends React.Component {
-  store: Redux.Store<any>
+  state: AppState
 
   constructor (props: any) {
     super(props)
-    this.store = Redux.createStore(appReducer, initialState)
+    this.state = initialState
   }
 
   render (): any {
     return (
       <div className="navMenu" style={ style }>
-        <MenuButton />
+        {
+          (this.state.dialogs.menu)
+          ? <MenuPanel onMenuButtonClick={this.onMenuButtonClick}/>
+          : <MenuButton onMenuButtonClick={this.onMenuButtonClick}/>
+        }
       </div>
     )
   }
 
-  onMenuButtonClick (): void {
+  onMenuButtonClick = (event: any) => {
     console.log('clicked')
+    this.setState((prevState: AppState) => {
+      return {
+        dialogs: {
+          menu: !prevState.dialogs.menu
+        }
+      }
+    })
   }
 }
 

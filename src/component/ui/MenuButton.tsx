@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { MenuButtonProps } from '../types/props'
 
 const styles: React.CSSProperties = {
   cls1: {
@@ -24,11 +25,16 @@ const styles: React.CSSProperties = {
   }
 }
 
-class MenuButton extends React.Component {
+class MenuButton extends React.Component<MenuButtonProps> {
+
+  constructor (props: MenuButtonProps) {
+    super(props)
+  }
 
   render (): any {
     return (
-        <svg
+      <div onClick={this.onMenuButtonClick}>
+      <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="2552.667 555.2 86.951 88.604"
@@ -66,7 +72,12 @@ class MenuButton extends React.Component {
         </g>
         </g>
         </svg>
+      </div>
     )
+  }
+
+  onMenuButtonClick = (event: any) => {
+    this.props.onMenuButtonClick(event)
   }
 }
 
