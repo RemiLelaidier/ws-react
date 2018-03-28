@@ -4,18 +4,18 @@ import { HomeItemProps } from '../types/props'
 const styles: React.CSSProperties = {
   container: {
     width: '100%',
-    height: '145px',
+    height: '125px',
     borderTop: '3px solid #9F621C',
     backgroundColor: '#433939'
   },
   icon: {
     width: '63px',
     float: 'left',
-    margin: '41px 0px 0px 20px'
+    margin: '34px 0px 0px 20px'
   },
   arrow: {
     width: '100px',
-    marginTop: '75px',
+    marginTop: '54px',
     marginLeft: '263px'
   },
   cls1: {
