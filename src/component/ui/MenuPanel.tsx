@@ -6,7 +6,8 @@ const styles: React.CSSProperties = {
     width: '20rem',
     top: '-7px',
     position: 'fixed',
-    left: '-10px'
+    left: '-10px',
+    zIndex: 99
   },
   cls1: {
     fill: '#433939',
