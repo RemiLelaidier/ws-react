@@ -11,7 +11,14 @@ const styles: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    color: '#FFFFFF'
+  },
+  firstLetter: {
+    color: '#FB8C00'
+  },
+  subHeader: {
+    color: '#785128'
   }
 }
 
@@ -23,8 +30,8 @@ class PageHeader extends React.Component {
   render () {
     return (
         <div style={styles.container}>
-            <span>Rémi Lelaidier</span>
-            <span>Dév Web</span>
+            <h1><span style={styles.firstLetter}>R</span>émi <span style={styles.firstLetter}>L</span>elaidier</h1>
+            <span style={styles.subHeader}>Développeur Web</span>
         </div>
     )
   }
