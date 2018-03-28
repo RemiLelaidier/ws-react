@@ -31,7 +31,6 @@ class App extends React.Component {
   }
 
   onMenuButtonClick = (event: any) => {
-    console.log('clicked')
     this.setState((prevState: AppState) => {
       return {
         dialogs: {
