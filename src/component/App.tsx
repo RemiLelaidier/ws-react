@@ -2,7 +2,15 @@ import * as React from 'react'
 import MenuButton from './ui/MenuButton'
 import MenuPanel from './ui/MenuPanel'
 import PageHeader from './ui/PageHeader'
-import AppState, { initialState } from './types/index'
+import HomeItem from './ui/HomeItem'
+import AppState, { initialState } from './types/state'
+
+const styles: React.CSSProperties = {
+  home: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+}
 
 class App extends React.Component {
   state: AppState
@@ -22,8 +30,13 @@ class App extends React.Component {
           : <MenuButton onMenuButtonClick={this.onMenuButtonClick}/>
         }
         </div>
-        <div id="home">
+        <div id="home" style={styles.home}>
           <PageHeader />
+          <HomeItem
+            name="Projets"
+            description="les projets c'est cool"
+            link="projects"
+            onHomeItemClick={this.onHomeItemClick} />
         </div>
       </div>
     )
@@ -37,6 +50,10 @@ class App extends React.Component {
         }
       }
     })
+  }
+
+  onHomeItemClick = (event: any) => {
+    console.log(event)
   }
 }
 
