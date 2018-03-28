@@ -8,10 +8,30 @@ const styles: React.CSSProperties = {
     borderTop: '3px solid #9F621C',
     backgroundColor: '#433939'
   },
+  clear: {
+    float: 'initial'
+  },
   icon: {
     width: '63px',
     float: 'left',
     margin: '34px 0px 0px 20px'
+  },
+  text: {
+    float: 'left',
+    marginLeft: '35px',
+    color: '#fff'
+  },
+  title: {
+    marginBottom: '8px'
+  },
+  subTitle: {
+    color: '#785128'
+  },
+  separator: {
+    width: '90%',
+    height: '0px',
+    margin: '8px auto',
+    border: '1px solid #fff'
   },
   arrow: {
     width: '100px',
@@ -69,6 +89,12 @@ class HomeItem extends React.Component<HomeItemProps> {
                   break
               }
             })()}
+          </div>
+          <div style={styles.clear}></div>
+          <div style={styles.text}>
+            <h2 style={styles.title}>{this.props.name}</h2>
+            <div style={styles.separator}></div>
+            <span style={styles.subTitle}>{this.props.description}</span>
           </div>
           <div style={styles.arrow}>
             <svg
