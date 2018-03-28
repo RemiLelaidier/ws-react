@@ -36,7 +36,17 @@ class App extends React.Component {
             name="Projets"
             description="les projets c'est cool"
             link="projects"
-            onHomeItemClick={this.onHomeItemClick} />
+            onHomeItemClick={this.onHomeItemProjectsClick} />
+          <HomeItem
+            name="Personnel"
+            description="c'est moi"
+            link="personnal"
+            onHomeItemClick={this.onHomeItemPersonnalClick} />
+          <HomeItem
+            name="Contact"
+            description="ET téléphone maison"
+            link="contact"
+            onHomeItemClick={this.onHomeItemContactClick} />
         </div>
       </div>
     )
@@ -52,7 +62,15 @@ class App extends React.Component {
     })
   }
 
-  onHomeItemClick = (event: any) => {
+  onHomeItemProjectsClick = (event: any) => {
+    console.log(event)
+  }
+
+  onHomeItemPersonnalClick = (event: any) => {
+    console.log(event)
+  }
+
+  onHomeItemContactClick = (event: any) => {
     console.log(event)
   }
 }
