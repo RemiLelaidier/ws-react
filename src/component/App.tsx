@@ -3,12 +3,6 @@ import MenuButton from './ui/MenuButton'
 import MenuPanel from './ui/MenuPanel'
 import AppState, { initialState } from './types/index'
 
-const style: React.CSSProperties = {
-  position: 'fixed',
-  top: 0,
-  left: 0
-}
-
 class App extends React.Component {
   state: AppState
 
@@ -19,7 +13,7 @@ class App extends React.Component {
 
   render (): any {
     return (
-      <div className="navMenu" style={ style }>
+      <div className="navMenu">
         {
           (this.state.dialogs.menu)
           ? <MenuPanel onMenuButtonClick={this.onMenuButtonClick}/>

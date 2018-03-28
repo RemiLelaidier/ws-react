@@ -3,6 +3,9 @@ import { MenuButtonProps } from '../types/props'
 
 const styles: React.CSSProperties = {
   container: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
     width: '6rem'
   },
   cls1: {
